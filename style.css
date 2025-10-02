@@ -95,3 +95,7 @@ button:hover{
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
+#resultado.visivel{
+    opacity: 1;
+}
