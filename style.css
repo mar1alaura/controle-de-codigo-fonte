@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+/* importar a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Variaveis de cor */
 :root{
     --cor-fundo: #f4f7f9;
     --cor-container: #ffffff;
@@ -8,7 +10,6 @@
     --cor-texto-secundario: #6c757d;
     --cor-borda: #dee2e6;
     --fonte-principal: 'Poppins', sans-serif;
-
 }
 
 body{
@@ -20,9 +21,11 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-
-    z-index: -1;
+    /* impede que o conteúdo do body afete a aparência da tag Canvas */
+    z-index: -1;    
 }
+
+/* 3. Estilo do canvas do fundo */
 
 #background-canvas{
     position: fixed;
@@ -30,12 +33,13 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Coloca o canvas atrás do conteúdo */
 }
 
+/* 4. o container do formulário */
 .container{
     width: 380px;
-    padding: 20px;
+    padding: 40px;
     background-color: var(--cor-container);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -47,17 +51,17 @@ h1{
     margin-bottom: 8px;
 }
 
-
 .subtitulo{
     color: var(--cor-texto-secundario);
     margin-top: 0;
     margin-bottom: 30px;
 }
 
+/* 5. Estilos dos inputs e botôes */
 input, button{
     width: 100%;
     padding: 14px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
     margin: 10px 0;
     padding: 14px;
     font-size: 16px;
@@ -65,13 +69,12 @@ input, button{
     border-radius: 8px;
     border: 1px solid var(--cor-borda);
     transition: all 0.3s ease;
-
 }
 
 input:focus{
-    outline: focus;
+    outline:focus;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 5px rgba(0 ,123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button{
@@ -85,6 +88,8 @@ button{
 button:hover{
     opacity: 0.85;
 }
+
+/* 6. estilo resultado*/
 
 #resultado{
     margin-top: 20px;
